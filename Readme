@@ -1,43 +1,96 @@
-Description:
-This is a beginner-friendly landing page created using HTML, CSS, and JavaScript. It consists of a navigation bar, a hero section with a call-to-action button, and basic interactivity using JavaScript.
+# Task List - Django Web App
 
-Features:
-✅ Responsive Navigation Bar
-✅ Hero Section with Heading, Description, and Button
-✅ JavaScript Alert on Button Click
-✅ Simple and Clean Design
+## Description
+This is a beginner-friendly task management web application built using Django. Users can create, update, search, and delete tasks. The app also includes user authentication (login/logout) and task categorization.
 
-File Structure:
-pgsql
-Copy
-Edit
-my-landing-page
-│
-├── index.html   <-- HTML Structure
-├── styles.css   <-- CSS Styles
-├── script.js    <-- JavaScript Functionality
-Technologies Used:
-HTML5 → For page structure
-CSS3 → For page styling
-JavaScript (Vanilla JS) → For basic interactivity
-How to Run the Project:
-Download the project or clone the repository.
-Open the index.html file in any web browser.
-Click the "Click Me" button to see the JavaScript alert.
-Code Explanation:
-index.html: Contains the page content like the navbar, heading, button, etc.
-styles.css: Adds visual styling like colors, padding, and responsiveness.
-script.js: Adds a simple JavaScript function to trigger an alert on button click.
-How the JavaScript Works:
-It selects the button using getElementById()
-Adds an event listener that listens for a button click.
-When clicked, it triggers an alert() message.
-Future Improvements:
-✅ Add smooth scrolling.
-✅ Include form submission functionality.
-✅ Enhance the design with CSS animations.
-✅ Make it a multi-page website.
-Author:
-Ananth shetty
-License:
+## Features
+✅ User Authentication: Sign up, log in, and log out.  
+✅ Task Management: Add, view, search, and delete tasks.  
+✅ Categories: Organize tasks by category.  
+✅ Search Functionality: Find tasks by title.  
+✅ Simple and Clean Design.  
+
+## File Structure
+```
+  todolist/                     # Root directory
+  │── manage.py                 # Django management script
+  │── db.sqlite3                # Database (if using SQLite)
+  │── myenv/                    # Virtual environment (optional)
+  │
+  ├── todolist/                 # Main project directory
+  │   ├── __init__.py           # Package initialization
+  │   ├── settings.py           # Django settings
+  │   ├── urls.py               # Project-level URLs
+  │   ├── asgi.py, wsgi.py      # Deployment files
+  │
+  ├── todo/                     # App directory
+  │   ├── __init__.py           # Package initialization
+  │   ├── migrations/           # Database migrations
+  │   ├── admin.py              # Admin configurations
+  │   ├── models.py             # Database models
+  │   ├── views.py              # Views (business logic)
+  │   ├── urls.py               # App-level URLs
+  │
+  ├── templates/                # HTML templates
+  │   ├── base.html, login.html, signup.html, task_list.html, logout.html
+  │
+  ├── static/                   # Static files (CSS, JS, images)
+  │   ├── css/
+  │   ├── js/
+  │   ├── images/
+  │
+  └── README.md                 # Project documentation
+```
+
+## Technologies Used
+🛠️ Django → For backend framework  
+🛠️ HTML/CSS → For frontend styling  
+🛠️ JavaScript (Vanilla JS) → For interactivity  
+🛠️ SQLite → Default database  
+
+## How to Run the Project
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/todolist.git
+   cd todolist
+   ```
+2. Create a virtual environment and activate it:
+   ```sh
+   python -m venv myenv
+   
+   # macOS/Linux
+   source myenv/bin/activate  
+   
+   # Windows
+   myenv\Scripts\activate  
+   ```
+3. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. Apply migrations:
+   ```sh
+   python manage.py migrate
+   ```
+5. Run the development server:
+   ```sh
+   python manage.py runserver
+   ```
+6. Open [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser.
+
+## How the Search Functionality Works
+✅ Users enter a keyword in the search bar.  
+✅ The system filters tasks based on the keyword.  
+✅ Matching tasks are displayed instantly.  
+
+## Future Improvements
+✅ Add task prioritization.  
+✅ Implement user roles and permissions.  
+✅ Improve UI with better CSS and animations.  
+✅ Deploy the project online.  
+
+## Author
+👤 Ananth Shetty
+
+## License
 This project is free to use and modify. Attribution is appreciated but not required.
